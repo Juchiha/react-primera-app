@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Saludar from './components/Saludar/Saludar';
+import Formulario from './components/Formulario';
+import LayoutBasic from './components/LayoutBasic';
 function App() {
+
+  const enviarsaludo = (nombre) =>{
+    console.log("Hola "+nombre);
+  } 
+  
+  const data = {
+    nombre: "Jose David",
+    apellido: "Giron",
+    edad : 31,
+    ciudad:"Barranquilla"
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <LayoutBasic>
+            <h2 className="nombre">Hola Mundo</h2>
+            <Saludar data={data}/>
+        </LayoutBasic>
   );
 }
 

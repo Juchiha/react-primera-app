@@ -1,0 +1,11 @@
+.buttonError {
+    color :red;
+    font-size: 20px;
+    background-color: black;
+}
+
+.buttonSuccess {
+    color: green;
+    font-size: 20px;
+    background-color: white;
+}

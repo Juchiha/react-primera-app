@@ -1,0 +1,15 @@
+.saludar .nombre {
+    color: blue;
+}
+
+.saludar .buttonError {
+    color :red;
+    font-size: 20px;
+    background-color: black;
+}
+
+.saludar .buttonSuccess {
+    color: green;
+    font-size: 20px;
+    background-color: white;
+}

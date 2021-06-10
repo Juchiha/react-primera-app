@@ -1,12 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 export default function Car(){
-    //const [started, setStarted] = useState(false);
-    //const [kil, setKil] = useState(0);
     const[carState ,setCarState] = useState({
         started : false,
         countKm : 0
     })
+
+    useEffect(() => {
+        if(carState.started){
+            document.title = `El carro esta Encendido`;
+        }else{
+            document.title = `El carro esta Apagado`;
+        }        
+    });
     const chechStateCar = ()=>{
         if(carState.started){
             return <span style={{ color:'green' }}>Encendido!</span>;
